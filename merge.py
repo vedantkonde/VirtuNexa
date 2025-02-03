@@ -2,7 +2,7 @@ import os
 import PyPDF2
 
 def merge_pdfs(pdf_list, output_filename):
-    """Merge multiple PDFs into one."""
+
     merger = PyPDF2.PdfMerger()
 
     for pdf in pdf_list:
@@ -20,7 +20,7 @@ def merge_pdfs(pdf_list, output_filename):
     print(f"Merged PDF saved as: {output_filename}")
 
 def split_pdf(input_pdf):
-    """Split a PDF into individual pages."""
+    
     if not os.path.exists(input_pdf) or not input_pdf.lower().endswith(".pdf"):
         print(f"Error: Invalid or missing file '{input_pdf}'.")
         return
@@ -43,7 +43,7 @@ def split_pdf(input_pdf):
             print(f"Saved: {output_filename}")
 
 def main():
-    """Console-based interface for merging and splitting PDFs."""
+    
     while True:
         print("\nPDF Merger & Splitter")
         print("1. Merge PDFs")
